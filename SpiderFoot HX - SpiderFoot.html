@@ -1,0 +1,1728 @@
+<!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
+<html lang="en-US" xmlns="http://www.w3.org/1999/html"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+<meta name="ahrefs-site-verification" content="7f1cad5db2328798fa57b2d594005b2f1f997abbebb5ba8263c09842f51f5804">
+	<!-- Required meta tags -->
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta property="og:url" content="https://www.spiderfoot.net">
+	<meta property="og:title" content="SpiderFoot: OSINT Automation">
+	<meta property="og:description" content="Automate your OSINT for better reconnaissance, investigations and perimeter monitoring. Open source or SpiderFoot HX.">
+	<meta property="og:site_name" content="SpiderFoot">
+	<meta property="og:image" content="https://www.spiderfoot.net/wp-content/themes/spiderfoot/img/sf-overview-new.png">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:domain" value="spiderfoot.net">
+	<meta name="twitter:title" value="SpiderFoot">
+	<meta name="twitter:description" value="Automate your OSINT for better reconnaissance, investigations and perimeter monitoring. Open source or SpiderFoot HX.">
+	<meta name="twitter:image" content="https://www.spiderfoot.net/wp-content/themes/spiderfoot/img/sf-overview-new.png">
+	<meta name="twitter:url" value="https://www.spiderfoot.net/">
+
+	<link rel="icon" type="image/png" href="https://www.spiderfoot.net/wp-content/themes/spiderfoot/img/favicon.png">
+    <title>SpiderFoot HX - SpiderFoot</title>
+    <meta name="description" content="">
+   <!-- <link href="https://www.spiderfoot.net/wp-content/themes/spiderfoot/css/main.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans&display=swap" rel="stylesheet">
+	-->
+	
+	<!-- This site is optimized with the Yoast SEO plugin v14.0.4 - https://yoast.com/wordpress/plugins/seo/ -->
+	<meta name="robots" content="index, follow">
+	<meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+	<meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+	<link rel="canonical" href="https://www.spiderfoot.net/hx/">
+	<meta property="og:locale" content="en_US">
+	<meta property="og:type" content="article">
+	<meta property="og:title" content="SpiderFoot HX - SpiderFoot">
+	<meta property="og:url" content="https://www.spiderfoot.net/hx/">
+	<meta property="og:site_name" content="SpiderFoot">
+	<meta property="article:modified_time" content="2020-04-06T11:20:45+00:00">
+	<meta name="twitter:card" content="summary_large_image">
+	<script async="" src="./SpiderFoot HX - SpiderFoot_files/analytics.js.download"></script><script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://www.spiderfoot.net/#website","url":"https://www.spiderfoot.net/","name":"SpiderFoot","description":"The most complete OSINT platform.","potentialAction":[{"@type":"SearchAction","target":"https://www.spiderfoot.net/?s={search_term_string}","query-input":"required name=search_term_string"}],"inLanguage":"en-US"},{"@type":"WebPage","@id":"https://www.spiderfoot.net/hx/#webpage","url":"https://www.spiderfoot.net/hx/","name":"SpiderFoot HX - SpiderFoot","isPartOf":{"@id":"https://www.spiderfoot.net/#website"},"datePublished":"2019-07-24T07:55:44+00:00","dateModified":"2020-04-06T11:20:45+00:00","inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://www.spiderfoot.net/hx/"]}]}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel="dns-prefetch" href="https://s.w.org/">
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.spiderfoot.net\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.4.1"}};
+			/*! This file is auto-generated */
+			!function(e,a,t){var r,n,o,i,p=a.createElement("canvas"),s=p.getContext&&p.getContext("2d");function c(e,t){var a=String.fromCharCode;s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,e),0,0);var r=p.toDataURL();return s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,t),0,0),r===p.toDataURL()}function l(e){if(!s||!s.fillText)return!1;switch(s.textBaseline="top",s.font="600 32px Arial",e){case"flag":return!c([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])&&(!c([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!c([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]));case"emoji":return!c([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340])}return!1}function d(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(i=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},o=0;o<i.length;o++)t.supports[i[o]]=l(i[o]),t.supports.everything=t.supports.everything&&t.supports[i[o]],"flag"!==i[o]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[i[o]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(r=t.source||{}).concatemoji?d(r.concatemoji):r.wpemoji&&r.twemoji&&(d(r.twemoji),d(r.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script><script src="./SpiderFoot HX - SpiderFoot_files/wp-emoji-release.min.js.download" type="text/javascript" defer=""></script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel="stylesheet" id="wp-block-library-css" href="./SpiderFoot HX - SpiderFoot_files/style.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="buildcss-css" href="./SpiderFoot HX - SpiderFoot_files/main.css" type="text/css" media="all">
+<link rel="https://api.w.org/" href="https://www.spiderfoot.net/wp-json/">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.spiderfoot.net/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://www.spiderfoot.net/wp-includes/wlwmanifest.xml"> 
+<meta name="generator" content="WordPress 5.4.1">
+<link rel="shortlink" href="https://www.spiderfoot.net/?p=188">
+<link rel="alternate" type="application/json+oembed" href="https://www.spiderfoot.net/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.spiderfoot.net%2Fhx%2F">
+<link rel="alternate" type="text/xml+oembed" href="https://www.spiderfoot.net/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.spiderfoot.net%2Fhx%2F&amp;format=xml">
+	
+</head>
+<body>
+
+<header id="masthead" class="header fgghhggh">
+    <div class="container">
+        <div class="row align-middle align-justify">
+
+            <div class="header-logo default-icon">
+				              <!--  <a href="https://www.spiderfoot.net" class="custom-logo-link" rel="home"><img width="168" height="22"
+                                                                     src="https://www.spiderfoot.net/wp-content/uploads/2019/07/logo.png"
+                                                                     class="custom-logo"
+                                                                     alt="logo"/></a>-->
+				<a href="https://www.spiderfoot.net/" class="custom-logo-link" rel="home">
+					<img width="168" height="22" src="./SpiderFoot HX - SpiderFoot_files/logo.svg" class="custom-logo" alt="logo">
+				</a>
+            </div>
+			
+		    <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="header-nav d-flex align-right align-middle">
+                <nav id="primary-navigation" class="primary-navigation">
+				<div class="menu-primary_ua-container"><ul id="primary-navigationa" class="menu navbar text-left"><li id="nav-menu-item-9" class="main-menu-item  menu-item-even menu-item-depth-0 menu-item menu-item-type-post_type menu-item-object-page menu-item-home"><a href="https://www.spiderfoot.net/" class="menu-link main-menu-link">Overview</a></li>
+<li id="nav-menu-item-190" class="main-menu-item  menu-item-even menu-item-depth-0 menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-188 current_page_item"><a href="https://www.spiderfoot.net/hx/" class="menu-link main-menu-link">SpiderFoot HX</a></li>
+<li id="nav-menu-item-29" class="main-menu-item  menu-item-even menu-item-depth-0 menu-item menu-item-type-post_type menu-item-object-page"><a href="https://www.spiderfoot.net/documentation/" class="menu-link main-menu-link">Documentation</a></li>
+<li id="nav-menu-item-64" class="main-menu-item  menu-item-even menu-item-depth-0 menu-item menu-item-type-post_type menu-item-object-page"><a href="https://www.spiderfoot.net/news/" class="menu-link main-menu-link">News</a></li>
+</ul></div>
+                </nav>
+                <nav id="social-navigation-top" class="social-navigation --header">
+
+				<div class="menu-primary_ua-container"><ul id="primary-navigationa" class="menu navbar text-left"><li id="nav-menu-item-30" class="main-menu-item  menu-item-even menu-item-depth-0 menu-item menu-item-type-custom menu-item-object-custom"><a target="_blank" href="https://twitter.com/spiderfoot" class="menu-link main-menu-link">twitter</a></li>
+<li id="nav-menu-item-31" class="main-menu-item  menu-item-even menu-item-depth-0 menu-item menu-item-type-custom menu-item-object-custom"><a target="_blank" href="https://github.com/smicallef/spiderfoot" class="menu-link main-menu-link">github</a></li>
+</ul></div>		
+                </nav><!-- #social-navigation -->
+            </div>
+        </div>
+    </div>
+</header><!-- #masthead -->
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-40651274-1', 'auto');
+  ga('set', 'anonymizeIp', true);
+  ga('send', 'pageview');
+
+</script>
+
+<div class="cookies">
+    <div class="cookies__wrap wrap">
+        <figure class="cookies__icon">
+            <img src="./SpiderFoot HX - SpiderFoot_files/cookie.svg" alt="cookie">
+        </figure>
+        <h5 class="cookies__title --semiBold">
+            We use cookies
+        </h5>
+        <p class="cookies__description">
+            This website use cookies to give you the best, most relevant experience. By continuing to use this website you’re accepting
+            this. If you wish to find out more, click this <a href="https://www.spiderfoot.net/privacy-policy">link</a> (or by clicking the Privacy link at the bottom of any page)
+        </p>
+        <button onclick="cookiesAgree(event, &quot;ok&quot;)" class="btn btn-primary cookies__btn --extraBold">CONFIRM</button>
+    </div>
+</div>
+
+    <section class="product-screen text-center wrap-line">
+        <div class="container full-height">
+            <div class="row full-height d-flex align-center align-middle">
+                <div class="col-md-6 col-xs-12">
+                    <div class="product-screen__content">
+                        <h1 class="product-screen__title --extraBold heading-1">Reconnaissance. <br>Threat Intelligence.<br>Perimeter Monitoring.</h1>
+                        <div>
+                            <form action="https://www.spiderfoot.net/wp-content/themes/spiderfoot/submit.php" method="get">
+                                <div class="subscribe-block">
+                                    <input placeholder="Your e-mail address" type="email" value="" class="form-input subscribe-block__input --home" name="email" required="">
+                                    <input type="submit" value="" class="subscribe-block__btn">
+                                </div>
+                            </form>
+                            <p class="form-notification text-center">Immediate free access to SpiderFoot HX</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-12 col-lg-11 col-md-10 col-xs-12">
+					                    <figure class="product-screen__icon ">
+                        <img src="./SpiderFoot HX - SpiderFoot_files/macbook-pro-clay-1.png" alt="">
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features --product">
+        <div class="container">
+            <div class="row align-center">
+                <div class="col-xl-6 col-lg-12 col-md-8 col-sm-12 col-xs-12 text-center">
+                    <h4 class="heading-2 --extraBold app-screen__title">SpiderFoot HX Features</h4>
+                    <div class="app-screen__description app__description">
+						If you like the open source SpiderFoot, you're going to love SpiderFoot HX. Check out what sets SpiderFoot HX apart from the open source version.					</div>
+
+                </div>
+            </div>
+            <div class="row m-row">
+			                <div class="column col-xl-4 col-md-6 col-sm-6 col-xs-12 features-item__column">
+                    <a href="https://www.spiderfoot.net/documentation#spiderfoot-hx" class="features-item">
+						<div>
+														<figure class="features-item__icon">
+								<img src="./SpiderFoot HX - SpiderFoot_files/features1.png" alt="">
+							</figure>
+							<h5 class="features-item__title heading-4 --semiBold">No installation necessary</h5>
+							<div class="features-item__description app__description">
+								 <p>Cloud hosted, managed and supported, tuned for performance. No dependency worries, no migration or upgrade headaches. Always on, always available to you and your team.</p>
+							</div>
+						</div>
+                        <div class="features-item__link">Learn More <i class="icon-arrow"></i></div>
+                    </a>
+                </div>
+			                <div class="column col-xl-4 col-md-6 col-sm-6 col-xs-12 features-item__column">
+                    <a href="https://www.spiderfoot.net/documentation#spiderfoot-hx" class="features-item">
+						<div>
+														<figure class="features-item__icon">
+								<img src="./SpiderFoot HX - SpiderFoot_files/features2.png" alt="">
+							</figure>
+							<h5 class="features-item__title heading-4 --semiBold">Find what matters, faster</h5>
+							<div class="features-item__description app__description">
+								 <p>Faster scans, shiny visualisations, versatile reporting, a revamped user interface and multi-target scanning to get you to what’s important, faster.</p>
+							</div>
+						</div>
+                        <div class="features-item__link">Learn More <i class="icon-arrow"></i></div>
+                    </a>
+                </div>
+			                <div class="column col-xl-4 col-md-6 col-sm-6 col-xs-12 features-item__column">
+                    <a href="https://www.spiderfoot.net/documentation#spiderfoot-hx" class="features-item">
+						<div>
+														<figure class="features-item__icon">
+								<img src="./SpiderFoot HX - SpiderFoot_files/features3.png" alt="">
+							</figure>
+							<h5 class="features-item__title heading-4 --semiBold">Get more data</h5>
+							<div class="features-item__description app__description">
+								 <p>HX-only modules and pre-configured tool modules mean you’ll know more than you can with the open source version. Correlations rules highlight data of interest.</p>
+							</div>
+						</div>
+                        <div class="features-item__link">Learn More <i class="icon-arrow"></i></div>
+                    </a>
+                </div>
+			                <div class="column col-xl-4 col-md-6 col-sm-6 col-xs-12 features-item__column">
+                    <a href="https://www.spiderfoot.net/documentation#spiderfoot-hx" class="features-item">
+						<div>
+														<figure class="features-item__icon">
+								<img src="./SpiderFoot HX - SpiderFoot_files/features4.png" alt="">
+							</figure>
+							<h5 class="features-item__title heading-4 --semiBold">Get notified</h5>
+							<div class="features-item__description app__description">
+								 <p>Change monitoring, Slack integration and&nbsp; e-mail notifications ensure you don’t need to continually check in on scan status.</p>
+							</div>
+						</div>
+                        <div class="features-item__link">Learn More <i class="icon-arrow"></i></div>
+                    </a>
+                </div>
+			                <div class="column col-xl-4 col-md-6 col-sm-6 col-xs-12 features-item__column">
+                    <a href="https://www.spiderfoot.net/documentation#spiderfoot-hx" class="features-item">
+						<div>
+														<figure class="features-item__icon">
+								<img src="./SpiderFoot HX - SpiderFoot_files/features5.png" alt="">
+							</figure>
+							<h5 class="features-item__title heading-4 --semiBold">Collaborate &amp; Integrate</h5>
+							<div class="features-item__description app__description">
+								 <p>Manage accounts and their level of access yourself, enabling for collaboration on investigations. Secure authentication with 2FA. Integrate with your other tools through SpiderFoot HX’s fully documented API.</p>
+							</div>
+						</div>
+                        <div class="features-item__link">Learn More <i class="icon-arrow"></i></div>
+                    </a>
+                </div>
+			                <div class="column col-xl-4 col-md-6 col-sm-6 col-xs-12 features-item__column">
+                    <a href="https://www.spiderfoot.net/documentation#spiderfoot-hx" class="features-item">
+						<div>
+														<figure class="features-item__icon">
+								<img src="./SpiderFoot HX - SpiderFoot_files/features6.png" alt="">
+							</figure>
+							<h5 class="features-item__title heading-4 --semiBold">Dark web integration &amp; Anonymous</h5>
+							<div class="features-item__description app__description">
+								 <p>Thanks to built-in TOR integration, you can seamlessly scan dark web / onion sites and do so completely anonymously.</p>
+							</div>
+						</div>
+                        <div class="features-item__link">Learn More <i class="icon-arrow"></i></div>
+                    </a>
+                </div>
+					
+
+            </div>
+        </div>
+    </section>
+
+    <section class="benefits">
+        <div class="container">
+            <div class="row align-center">
+                <div class="col-xl-6 col-lg-12 col-md-6 col-sm-12 col-xs-12 text-center">
+                    <h4 class="heading-2 --extraBold app-screen__title">Scan, Investigate, Monitor</h4>
+                </div>
+            </div>
+
+			            <div class="row m-row align-center align-middle benefits-item">
+                <div class="column col-xl-6 col-md-6 col-sm-6 col-xs-12 column-icon">
+					                    <figure class="benefits-item__icon default-icon">
+                        <img src="./SpiderFoot HX - SpiderFoot_files/Screenshot_2019-11-03-SpiderFoot-HX3.png" alt="">
+                    </figure>
+                </div>
+                <div class="column col-xl-6 col-md-6 col-sm-6 col-xs-12 column-info">
+                    <div class="benefits-item__content">
+						                       <!-- <figure class="benefits-item__content--icon default-icon d-flex align-middle align-center">
+                            <img src="https://www.spiderfoot.net/wp-content/uploads/2019/11/benefitts1.png" alt="">
+                        </figure>-->
+                        <h5 class="benefits-item__content--title heading-3 --bold">See OSINT like never before</h5>
+                        <div class="app__description">
+							<p>Carve up scan result data in different ways to get to the data that matters most, not to mention a ton of different visualisation possibilities.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+			            <div class="row m-row align-center align-middle benefits-item">
+                <div class="column col-xl-6 col-md-6 col-sm-6 col-xs-12 column-icon">
+					                    <figure class="benefits-item__icon default-icon">
+                        <img src="./SpiderFoot HX - SpiderFoot_files/Screenshot_2019-11-03-SpiderFoot-HX5.png" alt="">
+                    </figure>
+                </div>
+                <div class="column col-xl-6 col-md-6 col-sm-6 col-xs-12 column-info">
+                    <div class="benefits-item__content">
+						                       <!-- <figure class="benefits-item__content--icon default-icon d-flex align-middle align-center">
+                            <img src="https://www.spiderfoot.net/wp-content/uploads/2019/11/benefitts2.png" alt="">
+                        </figure>-->
+                        <h5 class="benefits-item__content--title heading-3 --bold">Pinpoint relevant data easily</h5>
+                        <div class="app__description">
+							<p>Don’t like the fire-and-forget approach to collecting OSINT? No problem, you can also perform investigations that enable you step through the data collection process step-by-step.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+			            <div class="row m-row align-center align-middle benefits-item">
+                <div class="column col-xl-6 col-md-6 col-sm-6 col-xs-12 column-icon">
+					                    <figure class="benefits-item__icon default-icon">
+                        <img src="./SpiderFoot HX - SpiderFoot_files/Screenshot_2019-11-03-SpiderFoot-HX13.png" alt="">
+                    </figure>
+                </div>
+                <div class="column col-xl-6 col-md-6 col-sm-6 col-xs-12 column-info">
+                    <div class="benefits-item__content">
+						                       <!-- <figure class="benefits-item__content--icon default-icon d-flex align-middle align-center">
+                            <img src="https://www.spiderfoot.net/wp-content/uploads/2019/11/benefitts3.png" alt="">
+                        </figure>-->
+                        <h5 class="benefits-item__content--title heading-3 --bold">Know when data changes</h5>
+                        <div class="app__description">
+							<p>Run scans automatically daily, weekly or monthly and be notified of any changes that were identified, such as newly exposed ports, new data breaches or newly identified vulnerabilities.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+							
+        </div>
+    </section>
+
+    <section class="plan">
+        <div class="container">
+            <div class="row align-center">
+                <div class="col-xl-6 col-lg-12 col-md-6 col-sm-12 col-xs-12 text-center">
+                    <h4 class="heading-2 --extraBold app-screen__title">Choose your plan</h4>
+                    <div class="app-screen__description app__description">
+					<p>Annual subscriptions receive the 12th month free.</p>
+ 
+					</div>
+
+                </div>
+            </div>
+
+            <div class="d-flex align-middle align-center">
+                <p class="billed-wrap__title"> Billed monthly</p>
+                <div class="billed-wrap">
+                    <input type="checkbox" id="checkable" class="billed-wrap__input">
+                    <label for="checkable" class="billed-wrap__label"></label>
+                </div>
+                <p class="billed-wrap__title">Billed annually</p>
+            </div>
+
+            <div class="plan-table">
+				                <div class="row plan-table__row --header align-middle">
+                    <div class="column plan-item">
+                        <p class="plan-item__name">Features</p>
+                    </div>
+                    <div class="column plan-item">
+                        <p class="plan-item__name">Open Source</p>
+                        <p class="plan-item__price">Free</p>
+                    </div>
+                    <div class="column plan-item">
+                        <p class="plan-item__name">Hobby</p>
+                        <p class="plan-item__price">
+							<span class="plan-item__price--month --extraBold">Free</span> 
+							<span class="plan-item__price--year --extraBold">Free</span>
+						</p>
+                    </div>
+                    <div class="column plan-item">
+                        <p class="plan-item__name">Basic</p>
+                        <p class="plan-item__price">
+							<span class="plan-item__price--month --extraBold">€19</span> 
+							<span class="plan-item__price--year --extraBold">€209</span>
+						</p>
+                    </div>
+                    <div class="column plan-item">
+                        <p class="plan-item__name">Standard</p>
+                        <p class="plan-item__price">
+							<span class="plan-item__price--month --extraBold">€59</span> 
+							<span class="plan-item__price--year --extraBold">€649</span>
+						</p>
+                    </div>
+                    <div class="column plan-item">
+                        <p class="plan-item__name">Professional </p>
+                        <p class="plan-item__price">
+							<span class="plan-item__price--month --extraBold">€179</span> 
+							<span class="plan-item__price--year --extraBold">€1969</span>
+						</p>
+                    </div>
+                    <div class="column plan-item">
+                        <p class="plan-item__name">Enterprise</p>
+                        <p class="plan-item__price">
+							<span class="plan-item__price--month --extraBold">€599</span> 
+							<span class="plan-item__price--year --extraBold">€6589</span>
+						</p>
+                    </div>
+                </div>
+											
+                <div class="row plan-table__row align-middle">
+                    <div class="column plan-item">
+                        <p class="plan-item__">Set up and maintenance</p>
+                    </div>
+                    <div class="column plan-item">
+						Yourself	
+                    </div>
+                    <div class="column plan-item">
+                        Cloud	
+                    </div>
+                    <div class="column plan-item">
+                        Cloud	
+                    </div>
+                    <div class="column plan-item">
+                        Cloud	
+                    </div>
+                    <div class="column plan-item">
+                        Cloud	
+                    </div>
+                    <div class="column plan-item">
+                        Cloud	
+                    </div>
+                </div>
+							
+                <div class="row plan-table__row align-middle">
+                    <div class="column plan-item">
+                        <p class="plan-item__">Scans per month</p>
+                    </div>
+                    <div class="column plan-item">
+						Unlimited	
+                    </div>
+                    <div class="column plan-item">
+                        3	
+                    </div>
+                    <div class="column plan-item">
+                        5	
+                    </div>
+                    <div class="column plan-item">
+                        10	
+                    </div>
+                    <div class="column plan-item">
+                        50	
+                    </div>
+                    <div class="column plan-item">
+                        200	
+                    </div>
+                </div>
+							
+                <div class="row plan-table__row align-middle">
+                    <div class="column plan-item">
+                        <p class="plan-item__">User accounts</p>
+                    </div>
+                    <div class="column plan-item">
+						N/A	
+                    </div>
+                    <div class="column plan-item">
+                        1	
+                    </div>
+                    <div class="column plan-item">
+                        1	
+                    </div>
+                    <div class="column plan-item">
+                        2	
+                    </div>
+                    <div class="column plan-item">
+                        5	
+                    </div>
+                    <div class="column plan-item">
+                        Unlimited	
+                    </div>
+                </div>
+							
+                <div class="row plan-table__row align-middle">
+                    <div class="column plan-item">
+                        <p class="plan-item__">Scan duration limit</p>
+                    </div>
+                    <div class="column plan-item">
+						Unlimited	
+                    </div>
+                    <div class="column plan-item">
+                        15 minutes	
+                    </div>
+                    <div class="column plan-item">
+                        4 hours	
+                    </div>
+                    <div class="column plan-item">
+                        24 hours	
+                    </div>
+                    <div class="column plan-item">
+                        72 hours	
+                    </div>
+                    <div class="column plan-item">
+                        120 hours	
+                    </div>
+                </div>
+							
+                <div class="row plan-table__row align-middle">
+                    <div class="column plan-item">
+                        <p class="plan-item__">Targets per scan</p>
+                    </div>
+                    <div class="column plan-item">
+						1	
+                    </div>
+                    <div class="column plan-item">
+                        1	
+                    </div>
+                    <div class="column plan-item">
+                        4	
+                    </div>
+                    <div class="column plan-item">
+                        256	
+                    </div>
+                    <div class="column plan-item">
+                        1024	
+                    </div>
+                    <div class="column plan-item">
+                        4096	
+                    </div>
+                </div>
+							
+                <div class="row plan-table__row align-middle">
+                    <div class="column plan-item">
+                        <p class="plan-item__">Investigations</p>
+                    </div>
+                    <div class="column plan-item">
+								<figure class="plan-item__state default-icon">
+			<img src="./SpiderFoot HX - SpiderFoot_files/error.png" alt="error icon">
+		</figure>
+		
+                    </div>
+                    <div class="column plan-item">
+                        		<figure class="plan-item__state default-icon">
+			<img src="./SpiderFoot HX - SpiderFoot_files/error.png" alt="error icon">
+		</figure>
+		
+                    </div>
+                    <div class="column plan-item">
+                        		<figure class="plan-item__state default-icon">
+			<img src="./SpiderFoot HX - SpiderFoot_files/checked.png" alt="checked icon">
+		</figure>
+		
+                    </div>
+                    <div class="column plan-item">
+                        		<figure class="plan-item__state default-icon">
+			<img src="./SpiderFoot HX - SpiderFoot_files/checked.png" alt="checked icon">
+		</figure>
+		
+                    </div>
+                    <div class="column plan-item">
+                        		<figure class="plan-item__state default-icon">
+			<img src="./SpiderFoot HX - SpiderFoot_files/checked.png" alt="checked icon">
+		</figure>
+		
+                    </div>
+                    <div class="column plan-item">
+                        		<figure class="plan-item__state default-icon">
+			<img src="./SpiderFoot HX - SpiderFoot_files/checked.png" alt="checked icon">
+		</figure>
+		
+                    </div>
+                </div>
+							
+                <div class="row plan-table__row align-middle">
+                    <div class="column plan-item">
+                        <p class="plan-item__">Correlations</p>
+                    </div>
+                    <div class="column plan-item">
+								<figure class="plan-item__state default-icon">
+			<img src="./SpiderFoot HX - SpiderFoot_files/error.png" alt="error icon">
+		</figure>
+		
+                    </div>
+                    <div class="column plan-item">
+                        		<figure class="plan-item__state default-icon">
+			<img src="./SpiderFoot HX - SpiderFoot_files/error.png" alt="error icon">
+		</figure>
+		
+                    </div>
+                    <div class="column plan-item">
+                        		<figure class="plan-item__state default-icon">
+			<img src="./SpiderFoot HX - SpiderFoot_files/checked.png" alt="checked icon">
+		</figure>
+		
+                    </div>
+                    <div class="column plan-item">
+                        		<figure class="plan-item__state default-icon">
+			<img src="./SpiderFoot HX - SpiderFoot_files/checked.png" alt="checked icon">
+		</figure>
+		
+                    </div>
+                    <div class="column plan-item">
+                        		<figure class="plan-item__state default-icon">
+			<img src="./SpiderFoot HX - SpiderFoot_files/checked.png" alt="checked icon">
+		</figure>
+		
+                    </div>
+                    <div class="column plan-item">
+                        		<figure class="plan-item__state default-icon">
+			<img src="./SpiderFoot HX - SpiderFoot_files/checked.png" alt="checked icon">
+		</figure>
+		
+                    </div>
+                </div>
+							
+                <div class="row plan-table__row align-middle">
+                    <div class="column plan-item">
+                        <p class="plan-item__">Data retention</p>
+                    </div>
+                    <div class="column plan-item">
+						Unlimited	
+                    </div>
+                    <div class="column plan-item">
+                        90 days	
+                    </div>
+                    <div class="column plan-item">
+                        90 days	
+                    </div>
+                    <div class="column plan-item">
+                        6 months	
+                    </div>
+                    <div class="column plan-item">
+                        12 months	
+                    </div>
+                    <div class="column plan-item">
+                        24 months	
+                    </div>
+                </div>
+							
+                <div class="row plan-table__row align-middle">
+                    <div class="column plan-item">
+                        <p class="plan-item__">Customer support</p>
+                    </div>
+                    <div class="column plan-item">
+								<figure class="plan-item__state default-icon">
+			<img src="./SpiderFoot HX - SpiderFoot_files/error.png" alt="error icon">
+		</figure>
+		
+                    </div>
+                    <div class="column plan-item">
+                        		<figure class="plan-item__state default-icon">
+			<img src="./SpiderFoot HX - SpiderFoot_files/error.png" alt="error icon">
+		</figure>
+		
+                    </div>
+                    <div class="column plan-item">
+                        		<figure class="plan-item__state default-icon">
+			<img src="./SpiderFoot HX - SpiderFoot_files/checked.png" alt="checked icon">
+		</figure>
+		
+                    </div>
+                    <div class="column plan-item">
+                        		<figure class="plan-item__state default-icon">
+			<img src="./SpiderFoot HX - SpiderFoot_files/checked.png" alt="checked icon">
+		</figure>
+		
+                    </div>
+                    <div class="column plan-item">
+                        		<figure class="plan-item__state default-icon">
+			<img src="./SpiderFoot HX - SpiderFoot_files/checked.png" alt="checked icon">
+		</figure>
+		
+                    </div>
+                    <div class="column plan-item">
+                        		<figure class="plan-item__state default-icon">
+			<img src="./SpiderFoot HX - SpiderFoot_files/checked.png" alt="checked icon">
+		</figure>
+		
+                    </div>
+                </div>
+							
+                <div class="row plan-table__row align-middle">
+                    <div class="column plan-item">
+                        <p class="plan-item__">Monitoring and change notifications</p>
+                    </div>
+                    <div class="column plan-item">
+								<figure class="plan-item__state default-icon">
+			<img src="./SpiderFoot HX - SpiderFoot_files/error.png" alt="error icon">
+		</figure>
+		
+                    </div>
+                    <div class="column plan-item">
+                        		<figure class="plan-item__state default-icon">
+			<img src="./SpiderFoot HX - SpiderFoot_files/error.png" alt="error icon">
+		</figure>
+		
+                    </div>
+                    <div class="column plan-item">
+                        		<figure class="plan-item__state default-icon">
+			<img src="./SpiderFoot HX - SpiderFoot_files/error.png" alt="error icon">
+		</figure>
+		
+                    </div>
+                    <div class="column plan-item">
+                        		<figure class="plan-item__state default-icon">
+			<img src="./SpiderFoot HX - SpiderFoot_files/checked.png" alt="checked icon">
+		</figure>
+		
+                    </div>
+                    <div class="column plan-item">
+                        		<figure class="plan-item__state default-icon">
+			<img src="./SpiderFoot HX - SpiderFoot_files/checked.png" alt="checked icon">
+		</figure>
+		
+                    </div>
+                    <div class="column plan-item">
+                        		<figure class="plan-item__state default-icon">
+			<img src="./SpiderFoot HX - SpiderFoot_files/checked.png" alt="checked icon">
+		</figure>
+		
+                    </div>
+                </div>
+							
+                <div class="row plan-table__row align-middle">
+                    <div class="column plan-item">
+                        <p class="plan-item__">SpiderFoot HX API</p>
+                    </div>
+                    <div class="column plan-item">
+								<figure class="plan-item__state default-icon">
+			<img src="./SpiderFoot HX - SpiderFoot_files/error.png" alt="error icon">
+		</figure>
+		
+                    </div>
+                    <div class="column plan-item">
+                        		<figure class="plan-item__state default-icon">
+			<img src="./SpiderFoot HX - SpiderFoot_files/error.png" alt="error icon">
+		</figure>
+		
+                    </div>
+                    <div class="column plan-item">
+                        		<figure class="plan-item__state default-icon">
+			<img src="./SpiderFoot HX - SpiderFoot_files/error.png" alt="error icon">
+		</figure>
+		
+                    </div>
+                    <div class="column plan-item">
+                        		<figure class="plan-item__state default-icon">
+			<img src="./SpiderFoot HX - SpiderFoot_files/checked.png" alt="checked icon">
+		</figure>
+		
+                    </div>
+                    <div class="column plan-item">
+                        		<figure class="plan-item__state default-icon">
+			<img src="./SpiderFoot HX - SpiderFoot_files/checked.png" alt="checked icon">
+		</figure>
+		
+                    </div>
+                    <div class="column plan-item">
+                        		<figure class="plan-item__state default-icon">
+			<img src="./SpiderFoot HX - SpiderFoot_files/checked.png" alt="checked icon">
+		</figure>
+		
+                    </div>
+                </div>
+							
+                <div class="row plan-table__row align-middle">
+                    <div class="column plan-item">
+                        <p class="plan-item__">Screenshotting</p>
+                    </div>
+                    <div class="column plan-item">
+								<figure class="plan-item__state default-icon">
+			<img src="./SpiderFoot HX - SpiderFoot_files/error.png" alt="error icon">
+		</figure>
+		
+                    </div>
+                    <div class="column plan-item">
+                        		<figure class="plan-item__state default-icon">
+			<img src="./SpiderFoot HX - SpiderFoot_files/error.png" alt="error icon">
+		</figure>
+		
+                    </div>
+                    <div class="column plan-item">
+                        		<figure class="plan-item__state default-icon">
+			<img src="./SpiderFoot HX - SpiderFoot_files/error.png" alt="error icon">
+		</figure>
+		
+                    </div>
+                    <div class="column plan-item">
+                        		<figure class="plan-item__state default-icon">
+			<img src="./SpiderFoot HX - SpiderFoot_files/error.png" alt="error icon">
+		</figure>
+		
+                    </div>
+                    <div class="column plan-item">
+                        		<figure class="plan-item__state default-icon">
+			<img src="./SpiderFoot HX - SpiderFoot_files/checked.png" alt="checked icon">
+		</figure>
+		
+                    </div>
+                    <div class="column plan-item">
+                        		<figure class="plan-item__state default-icon">
+			<img src="./SpiderFoot HX - SpiderFoot_files/checked.png" alt="checked icon">
+		</figure>
+		
+                    </div>
+                </div>
+								
+				
+                <div class="row plan-table__row --footer align-middle">
+                    <div class="column plan-item">
+                        <p class="plan-item__name">Option</p>
+                    </div>
+                    <div class="column plan-item">
+                        <a href="https://github.com/smicallef/spiderfoot" class="btn btn-download --table">DOWNLOAD NOW </a>
+                    </div>
+                    <div class="column plan-item">
+                        <button data-modal="#order-modal" class="btn btn-primary modalTrigger">Sign up</button>
+                    </div>
+                    <div class="column plan-item">
+                        <button data-modal="#order-modal" class="btn btn-primary modalTrigger">Sign up</button>
+                    </div>
+                    <div class="column plan-item">
+                        <button data-modal="#order-modal" class="btn btn-primary modalTrigger">Sign up</button>
+                    </div>
+                    <div class="column plan-item">
+                        <button data-modal="#order-modal" class="btn btn-primary modalTrigger">Sign up</button>
+                    </div>
+                    <div class="column plan-item">
+                        <button data-modal="#order-modal" class="btn btn-primary modalTrigger">Sign up</button>
+                    </div>
+                </div>
+            </div>
+       
+<!--mobile table-->
+   <div class="plan-mobile">
+   
+<!--Free -->
+            <div class="plan-mobile__item">
+                <div class="row plan-table__row --header d-flex align-middle">
+                    <div class="column col-xs-6 plan-item">
+                        <p class="plan-item__name">Features</p>
+                    </div>
+                    <div class="column col-xs-6 plan-item">
+                        <p class="plan-item__name">Open Source</p>
+                        <p class="plan-item__price">Free</p>
+                    </div>
+                </div>
+					
+                <div class="row plan-table__row">
+                    <div class="column col-xs-6 plan-item">
+                        <p class="plan-item__name">Set up and maintenance</p>
+                    </div>
+                    <div class="column col-xs-6 plan-item">
+                           Yourself                    </div>
+                </div>
+					
+                <div class="row plan-table__row">
+                    <div class="column col-xs-6 plan-item">
+                        <p class="plan-item__name">Scans per month</p>
+                    </div>
+                    <div class="column col-xs-6 plan-item">
+                           Unlimited                    </div>
+                </div>
+					
+                <div class="row plan-table__row">
+                    <div class="column col-xs-6 plan-item">
+                        <p class="plan-item__name">User accounts</p>
+                    </div>
+                    <div class="column col-xs-6 plan-item">
+                           N/A                    </div>
+                </div>
+					
+                <div class="row plan-table__row">
+                    <div class="column col-xs-6 plan-item">
+                        <p class="plan-item__name">Scan duration limit</p>
+                    </div>
+                    <div class="column col-xs-6 plan-item">
+                           Unlimited                    </div>
+                </div>
+					
+                <div class="row plan-table__row">
+                    <div class="column col-xs-6 plan-item">
+                        <p class="plan-item__name">Targets per scan</p>
+                    </div>
+                    <div class="column col-xs-6 plan-item">
+                           1                    </div>
+                </div>
+					
+                <div class="row plan-table__row">
+                    <div class="column col-xs-6 plan-item">
+                        <p class="plan-item__name">Investigations</p>
+                    </div>
+                    <div class="column col-xs-6 plan-item">
+                           		<figure class="plan-item__state default-icon">
+			<img src="./SpiderFoot HX - SpiderFoot_files/error.png" alt="error icon">
+		</figure>
+	                    </div>
+                </div>
+					
+                <div class="row plan-table__row">
+                    <div class="column col-xs-6 plan-item">
+                        <p class="plan-item__name">Correlations</p>
+                    </div>
+                    <div class="column col-xs-6 plan-item">
+                           		<figure class="plan-item__state default-icon">
+			<img src="./SpiderFoot HX - SpiderFoot_files/error.png" alt="error icon">
+		</figure>
+	                    </div>
+                </div>
+					
+                <div class="row plan-table__row">
+                    <div class="column col-xs-6 plan-item">
+                        <p class="plan-item__name">Data retention</p>
+                    </div>
+                    <div class="column col-xs-6 plan-item">
+                           Unlimited                    </div>
+                </div>
+					
+                <div class="row plan-table__row">
+                    <div class="column col-xs-6 plan-item">
+                        <p class="plan-item__name">Customer support</p>
+                    </div>
+                    <div class="column col-xs-6 plan-item">
+                           		<figure class="plan-item__state default-icon">
+			<img src="./SpiderFoot HX - SpiderFoot_files/error.png" alt="error icon">
+		</figure>
+	                    </div>
+                </div>
+					
+                <div class="row plan-table__row">
+                    <div class="column col-xs-6 plan-item">
+                        <p class="plan-item__name">Monitoring and change notifications</p>
+                    </div>
+                    <div class="column col-xs-6 plan-item">
+                           		<figure class="plan-item__state default-icon">
+			<img src="./SpiderFoot HX - SpiderFoot_files/error.png" alt="error icon">
+		</figure>
+	                    </div>
+                </div>
+					
+                <div class="row plan-table__row">
+                    <div class="column col-xs-6 plan-item">
+                        <p class="plan-item__name">SpiderFoot HX API</p>
+                    </div>
+                    <div class="column col-xs-6 plan-item">
+                           		<figure class="plan-item__state default-icon">
+			<img src="./SpiderFoot HX - SpiderFoot_files/error.png" alt="error icon">
+		</figure>
+	                    </div>
+                </div>
+					
+                <div class="row plan-table__row">
+                    <div class="column col-xs-6 plan-item">
+                        <p class="plan-item__name">Screenshotting</p>
+                    </div>
+                    <div class="column col-xs-6 plan-item">
+                           		<figure class="plan-item__state default-icon">
+			<img src="./SpiderFoot HX - SpiderFoot_files/error.png" alt="error icon">
+		</figure>
+	                    </div>
+                </div>
+					
+                <div class="row plan-table__row --footer">
+                    <div class="column col-xs-6 plan-item">
+                        <p class="plan-item__name">Option</p>
+                    </div>
+                    <div class="column col-xs-6 plan-item">
+                        <a href="https://github.com/smicallef/spiderfoot" class="btn btn-download --table">DOWNLOAD 
+                            NOW </a>
+                    </div>
+                </div>
+            </div>
+			
+<!--Hobby -->
+            <div class="plan-mobile__item">
+                <div class="row plan-table__row --header d-flex align-middle">
+                    <div class="column col-xs-6 plan-item">
+                        <p class="plan-item__name">Features</p>
+                    </div>
+                    <div class="column col-xs-6 plan-item">
+                        <p class="plan-item__name">Hobby</p>
+
+                        <p class="plan-item__price"><span class="plan-item__price--month --extraBold">Free</span> <span class="plan-item__price--year --extraBold">Free</span></p>
+                    </div>
+                </div>
+					
+                <div class="row plan-table__row">
+                    <div class="column col-xs-6 plan-item">
+                        <p class="plan-item__name">Set up and maintenance</p>
+                    </div>
+                    <div class="column col-xs-6 plan-item">
+						Cloud                    </div>
+                </div>
+					
+                <div class="row plan-table__row">
+                    <div class="column col-xs-6 plan-item">
+                        <p class="plan-item__name">Scans per month</p>
+                    </div>
+                    <div class="column col-xs-6 plan-item">
+						3                    </div>
+                </div>
+					
+                <div class="row plan-table__row">
+                    <div class="column col-xs-6 plan-item">
+                        <p class="plan-item__name">User accounts</p>
+                    </div>
+                    <div class="column col-xs-6 plan-item">
+						1                    </div>
+                </div>
+					
+                <div class="row plan-table__row">
+                    <div class="column col-xs-6 plan-item">
+                        <p class="plan-item__name">Scan duration limit</p>
+                    </div>
+                    <div class="column col-xs-6 plan-item">
+						15 minutes                    </div>
+                </div>
+					
+                <div class="row plan-table__row">
+                    <div class="column col-xs-6 plan-item">
+                        <p class="plan-item__name">Targets per scan</p>
+                    </div>
+                    <div class="column col-xs-6 plan-item">
+						1                    </div>
+                </div>
+					
+                <div class="row plan-table__row">
+                    <div class="column col-xs-6 plan-item">
+                        <p class="plan-item__name">Investigations</p>
+                    </div>
+                    <div class="column col-xs-6 plan-item">
+								<figure class="plan-item__state default-icon">
+			<img src="./SpiderFoot HX - SpiderFoot_files/error.png" alt="error icon">
+		</figure>
+	                    </div>
+                </div>
+					
+                <div class="row plan-table__row">
+                    <div class="column col-xs-6 plan-item">
+                        <p class="plan-item__name">Correlations</p>
+                    </div>
+                    <div class="column col-xs-6 plan-item">
+								<figure class="plan-item__state default-icon">
+			<img src="./SpiderFoot HX - SpiderFoot_files/error.png" alt="error icon">
+		</figure>
+	                    </div>
+                </div>
+					
+                <div class="row plan-table__row">
+                    <div class="column col-xs-6 plan-item">
+                        <p class="plan-item__name">Data retention</p>
+                    </div>
+                    <div class="column col-xs-6 plan-item">
+						90 days                    </div>
+                </div>
+					
+                <div class="row plan-table__row">
+                    <div class="column col-xs-6 plan-item">
+                        <p class="plan-item__name">Customer support</p>
+                    </div>
+                    <div class="column col-xs-6 plan-item">
+								<figure class="plan-item__state default-icon">
+			<img src="./SpiderFoot HX - SpiderFoot_files/error.png" alt="error icon">
+		</figure>
+	                    </div>
+                </div>
+					
+                <div class="row plan-table__row">
+                    <div class="column col-xs-6 plan-item">
+                        <p class="plan-item__name">Monitoring and change notifications</p>
+                    </div>
+                    <div class="column col-xs-6 plan-item">
+								<figure class="plan-item__state default-icon">
+			<img src="./SpiderFoot HX - SpiderFoot_files/error.png" alt="error icon">
+		</figure>
+	                    </div>
+                </div>
+					
+                <div class="row plan-table__row">
+                    <div class="column col-xs-6 plan-item">
+                        <p class="plan-item__name">SpiderFoot HX API</p>
+                    </div>
+                    <div class="column col-xs-6 plan-item">
+								<figure class="plan-item__state default-icon">
+			<img src="./SpiderFoot HX - SpiderFoot_files/error.png" alt="error icon">
+		</figure>
+	                    </div>
+                </div>
+					
+                <div class="row plan-table__row">
+                    <div class="column col-xs-6 plan-item">
+                        <p class="plan-item__name">Screenshotting</p>
+                    </div>
+                    <div class="column col-xs-6 plan-item">
+								<figure class="plan-item__state default-icon">
+			<img src="./SpiderFoot HX - SpiderFoot_files/error.png" alt="error icon">
+		</figure>
+	                    </div>
+                </div>
+					
+                <div class="row plan-table__row --footer d-flex align-middle">
+                    <div class="column col-xs-6 plan-item">
+                        <p class="plan-item__name">Option</p>
+                    </div>
+                    <div class="column col-xs-6 plan-item">
+                        <button data-modal="#order-modal" class="btn btn-primary modalTrigger">Sign up</button>
+                    </div>
+                </div>
+            </div>
+
+<!--Basic -->
+            <div class="plan-mobile__item">
+                <div class="row plan-table__row --header d-flex align-middle">
+                    <div class="column col-xs-6 plan-item">
+                        <p class="plan-item__name">Features</p>
+                    </div>
+                    <div class="column col-xs-6 plan-item">
+                        <p class="plan-item__name">Basic</p>
+
+                        <p class="plan-item__price"><span class="plan-item__price--month --extraBold">€19</span> <span class="plan-item__price--year --extraBold">€209</span></p>
+                    </div>
+                </div>
+					
+                <div class="row plan-table__row">
+                    <div class="column col-xs-6 plan-item">
+                        <p class="plan-item__name">Set up and maintenance</p>
+                    </div>
+                    <div class="column col-xs-6 plan-item">
+						Cloud                    </div>
+                </div>
+					
+                <div class="row plan-table__row">
+                    <div class="column col-xs-6 plan-item">
+                        <p class="plan-item__name">Scans per month</p>
+                    </div>
+                    <div class="column col-xs-6 plan-item">
+						5                    </div>
+                </div>
+					
+                <div class="row plan-table__row">
+                    <div class="column col-xs-6 plan-item">
+                        <p class="plan-item__name">User accounts</p>
+                    </div>
+                    <div class="column col-xs-6 plan-item">
+						1                    </div>
+                </div>
+					
+                <div class="row plan-table__row">
+                    <div class="column col-xs-6 plan-item">
+                        <p class="plan-item__name">Scan duration limit</p>
+                    </div>
+                    <div class="column col-xs-6 plan-item">
+						4 hours                    </div>
+                </div>
+					
+                <div class="row plan-table__row">
+                    <div class="column col-xs-6 plan-item">
+                        <p class="plan-item__name">Targets per scan</p>
+                    </div>
+                    <div class="column col-xs-6 plan-item">
+						4                    </div>
+                </div>
+					
+                <div class="row plan-table__row">
+                    <div class="column col-xs-6 plan-item">
+                        <p class="plan-item__name">Investigations</p>
+                    </div>
+                    <div class="column col-xs-6 plan-item">
+								<figure class="plan-item__state default-icon">
+			<img src="./SpiderFoot HX - SpiderFoot_files/checked.png" alt="checked icon">
+		</figure>
+	                    </div>
+                </div>
+					
+                <div class="row plan-table__row">
+                    <div class="column col-xs-6 plan-item">
+                        <p class="plan-item__name">Correlations</p>
+                    </div>
+                    <div class="column col-xs-6 plan-item">
+								<figure class="plan-item__state default-icon">
+			<img src="./SpiderFoot HX - SpiderFoot_files/checked.png" alt="checked icon">
+		</figure>
+	                    </div>
+                </div>
+					
+                <div class="row plan-table__row">
+                    <div class="column col-xs-6 plan-item">
+                        <p class="plan-item__name">Data retention</p>
+                    </div>
+                    <div class="column col-xs-6 plan-item">
+						90 days                    </div>
+                </div>
+					
+                <div class="row plan-table__row">
+                    <div class="column col-xs-6 plan-item">
+                        <p class="plan-item__name">Customer support</p>
+                    </div>
+                    <div class="column col-xs-6 plan-item">
+								<figure class="plan-item__state default-icon">
+			<img src="./SpiderFoot HX - SpiderFoot_files/checked.png" alt="checked icon">
+		</figure>
+	                    </div>
+                </div>
+					
+                <div class="row plan-table__row">
+                    <div class="column col-xs-6 plan-item">
+                        <p class="plan-item__name">Monitoring and change notifications</p>
+                    </div>
+                    <div class="column col-xs-6 plan-item">
+								<figure class="plan-item__state default-icon">
+			<img src="./SpiderFoot HX - SpiderFoot_files/error.png" alt="error icon">
+		</figure>
+	                    </div>
+                </div>
+					
+                <div class="row plan-table__row">
+                    <div class="column col-xs-6 plan-item">
+                        <p class="plan-item__name">SpiderFoot HX API</p>
+                    </div>
+                    <div class="column col-xs-6 plan-item">
+								<figure class="plan-item__state default-icon">
+			<img src="./SpiderFoot HX - SpiderFoot_files/error.png" alt="error icon">
+		</figure>
+	                    </div>
+                </div>
+					
+                <div class="row plan-table__row">
+                    <div class="column col-xs-6 plan-item">
+                        <p class="plan-item__name">Screenshotting</p>
+                    </div>
+                    <div class="column col-xs-6 plan-item">
+								<figure class="plan-item__state default-icon">
+			<img src="./SpiderFoot HX - SpiderFoot_files/error.png" alt="error icon">
+		</figure>
+	                    </div>
+                </div>
+					
+                <div class="row plan-table__row --footer d-flex align-middle">
+                    <div class="column col-xs-6 plan-item">
+                        <p class="plan-item__name">Option</p>
+                    </div>
+                    <div class="column col-xs-6 plan-item">
+                        <button data-modal="#order-modal" class="btn btn-primary modalTrigger">Sign up</button>
+                    </div>
+                </div>
+            </div>
+ <!--Standart -->
+            <div class="plan-mobile__item">
+                <div class="row plan-table__row --header d-flex align-middle">
+                    <div class="column col-xs-6 plan-item">
+                        <p class="plan-item__name">Features</p>
+                    </div>
+                    <div class="column col-xs-6 plan-item">
+                        <p class="plan-item__name">Standard</p>
+
+                        <p class="plan-item__price"><span class="plan-item__price--month --extraBold">€59</span> <span class="plan-item__price--year --extraBold">€649</span></p>
+                    </div>
+                </div>
+					
+                <div class="row plan-table__row">
+                    <div class="column col-xs-6 plan-item">
+                        <p class="plan-item__name">Set up and maintenance</p>
+                    </div>
+                    <div class="column col-xs-6 plan-item">
+						Cloud                    </div>
+                </div>
+					
+                <div class="row plan-table__row">
+                    <div class="column col-xs-6 plan-item">
+                        <p class="plan-item__name">Scans per month</p>
+                    </div>
+                    <div class="column col-xs-6 plan-item">
+						10                    </div>
+                </div>
+					
+                <div class="row plan-table__row">
+                    <div class="column col-xs-6 plan-item">
+                        <p class="plan-item__name">User accounts</p>
+                    </div>
+                    <div class="column col-xs-6 plan-item">
+						2                    </div>
+                </div>
+					
+                <div class="row plan-table__row">
+                    <div class="column col-xs-6 plan-item">
+                        <p class="plan-item__name">Scan duration limit</p>
+                    </div>
+                    <div class="column col-xs-6 plan-item">
+						24 hours                    </div>
+                </div>
+					
+                <div class="row plan-table__row">
+                    <div class="column col-xs-6 plan-item">
+                        <p class="plan-item__name">Targets per scan</p>
+                    </div>
+                    <div class="column col-xs-6 plan-item">
+						256                    </div>
+                </div>
+					
+                <div class="row plan-table__row">
+                    <div class="column col-xs-6 plan-item">
+                        <p class="plan-item__name">Investigations</p>
+                    </div>
+                    <div class="column col-xs-6 plan-item">
+								<figure class="plan-item__state default-icon">
+			<img src="./SpiderFoot HX - SpiderFoot_files/checked.png" alt="checked icon">
+		</figure>
+	                    </div>
+                </div>
+					
+                <div class="row plan-table__row">
+                    <div class="column col-xs-6 plan-item">
+                        <p class="plan-item__name">Correlations</p>
+                    </div>
+                    <div class="column col-xs-6 plan-item">
+								<figure class="plan-item__state default-icon">
+			<img src="./SpiderFoot HX - SpiderFoot_files/checked.png" alt="checked icon">
+		</figure>
+	                    </div>
+                </div>
+					
+                <div class="row plan-table__row">
+                    <div class="column col-xs-6 plan-item">
+                        <p class="plan-item__name">Data retention</p>
+                    </div>
+                    <div class="column col-xs-6 plan-item">
+						6 months                    </div>
+                </div>
+					
+                <div class="row plan-table__row">
+                    <div class="column col-xs-6 plan-item">
+                        <p class="plan-item__name">Customer support</p>
+                    </div>
+                    <div class="column col-xs-6 plan-item">
+								<figure class="plan-item__state default-icon">
+			<img src="./SpiderFoot HX - SpiderFoot_files/checked.png" alt="checked icon">
+		</figure>
+	                    </div>
+                </div>
+					
+                <div class="row plan-table__row">
+                    <div class="column col-xs-6 plan-item">
+                        <p class="plan-item__name">Monitoring and change notifications</p>
+                    </div>
+                    <div class="column col-xs-6 plan-item">
+								<figure class="plan-item__state default-icon">
+			<img src="./SpiderFoot HX - SpiderFoot_files/checked.png" alt="checked icon">
+		</figure>
+	                    </div>
+                </div>
+					
+                <div class="row plan-table__row">
+                    <div class="column col-xs-6 plan-item">
+                        <p class="plan-item__name">SpiderFoot HX API</p>
+                    </div>
+                    <div class="column col-xs-6 plan-item">
+								<figure class="plan-item__state default-icon">
+			<img src="./SpiderFoot HX - SpiderFoot_files/checked.png" alt="checked icon">
+		</figure>
+	                    </div>
+                </div>
+					
+                <div class="row plan-table__row">
+                    <div class="column col-xs-6 plan-item">
+                        <p class="plan-item__name">Screenshotting</p>
+                    </div>
+                    <div class="column col-xs-6 plan-item">
+								<figure class="plan-item__state default-icon">
+			<img src="./SpiderFoot HX - SpiderFoot_files/error.png" alt="error icon">
+		</figure>
+	                    </div>
+                </div>
+					
+                <div class="row plan-table__row --footer d-flex align-middle">
+                    <div class="column col-xs-6 plan-item">
+                        <p class="plan-item__name">Option</p>
+                    </div>
+                    <div class="column col-xs-6 plan-item">
+                        <button data-modal="#order-modal" class="btn btn-primary modalTrigger">Sign up</button>
+                    </div>
+                </div>
+            </div>
+ <!--Professional -->
+            <div class="plan-mobile__item">
+                <div class="row plan-table__row --header d-flex align-middle">
+                    <div class="column col-xs-6 plan-item">
+                        <p class="plan-item__name">Features</p>
+                    </div>
+                    <div class="column col-xs-6 plan-item">
+                        <p class="plan-item__name">Professional </p>
+
+                        <p class="plan-item__price"><span class="plan-item__price--month --extraBold">€179</span> <span class="plan-item__price--year --extraBold">€1969</span></p>
+                    </div>
+                </div>
+					
+                <div class="row plan-table__row">
+                    <div class="column col-xs-6 plan-item">
+                        <p class="plan-item__name">Set up and maintenance</p>
+                    </div>
+                    <div class="column col-xs-6 plan-item">
+						Cloud                    </div>
+                </div>
+					
+                <div class="row plan-table__row">
+                    <div class="column col-xs-6 plan-item">
+                        <p class="plan-item__name">Scans per month</p>
+                    </div>
+                    <div class="column col-xs-6 plan-item">
+						50                    </div>
+                </div>
+					
+                <div class="row plan-table__row">
+                    <div class="column col-xs-6 plan-item">
+                        <p class="plan-item__name">User accounts</p>
+                    </div>
+                    <div class="column col-xs-6 plan-item">
+						5                    </div>
+                </div>
+					
+                <div class="row plan-table__row">
+                    <div class="column col-xs-6 plan-item">
+                        <p class="plan-item__name">Scan duration limit</p>
+                    </div>
+                    <div class="column col-xs-6 plan-item">
+						72 hours                    </div>
+                </div>
+					
+                <div class="row plan-table__row">
+                    <div class="column col-xs-6 plan-item">
+                        <p class="plan-item__name">Targets per scan</p>
+                    </div>
+                    <div class="column col-xs-6 plan-item">
+						1024                    </div>
+                </div>
+					
+                <div class="row plan-table__row">
+                    <div class="column col-xs-6 plan-item">
+                        <p class="plan-item__name">Investigations</p>
+                    </div>
+                    <div class="column col-xs-6 plan-item">
+								<figure class="plan-item__state default-icon">
+			<img src="./SpiderFoot HX - SpiderFoot_files/checked.png" alt="checked icon">
+		</figure>
+	                    </div>
+                </div>
+					
+                <div class="row plan-table__row">
+                    <div class="column col-xs-6 plan-item">
+                        <p class="plan-item__name">Correlations</p>
+                    </div>
+                    <div class="column col-xs-6 plan-item">
+								<figure class="plan-item__state default-icon">
+			<img src="./SpiderFoot HX - SpiderFoot_files/checked.png" alt="checked icon">
+		</figure>
+	                    </div>
+                </div>
+					
+                <div class="row plan-table__row">
+                    <div class="column col-xs-6 plan-item">
+                        <p class="plan-item__name">Data retention</p>
+                    </div>
+                    <div class="column col-xs-6 plan-item">
+						12 months                    </div>
+                </div>
+					
+                <div class="row plan-table__row">
+                    <div class="column col-xs-6 plan-item">
+                        <p class="plan-item__name">Customer support</p>
+                    </div>
+                    <div class="column col-xs-6 plan-item">
+								<figure class="plan-item__state default-icon">
+			<img src="./SpiderFoot HX - SpiderFoot_files/checked.png" alt="checked icon">
+		</figure>
+	                    </div>
+                </div>
+					
+                <div class="row plan-table__row">
+                    <div class="column col-xs-6 plan-item">
+                        <p class="plan-item__name">Monitoring and change notifications</p>
+                    </div>
+                    <div class="column col-xs-6 plan-item">
+								<figure class="plan-item__state default-icon">
+			<img src="./SpiderFoot HX - SpiderFoot_files/checked.png" alt="checked icon">
+		</figure>
+	                    </div>
+                </div>
+					
+                <div class="row plan-table__row">
+                    <div class="column col-xs-6 plan-item">
+                        <p class="plan-item__name">SpiderFoot HX API</p>
+                    </div>
+                    <div class="column col-xs-6 plan-item">
+								<figure class="plan-item__state default-icon">
+			<img src="./SpiderFoot HX - SpiderFoot_files/checked.png" alt="checked icon">
+		</figure>
+	                    </div>
+                </div>
+					
+                <div class="row plan-table__row">
+                    <div class="column col-xs-6 plan-item">
+                        <p class="plan-item__name">Screenshotting</p>
+                    </div>
+                    <div class="column col-xs-6 plan-item">
+								<figure class="plan-item__state default-icon">
+			<img src="./SpiderFoot HX - SpiderFoot_files/checked.png" alt="checked icon">
+		</figure>
+	                    </div>
+                </div>
+					
+                <div class="row plan-table__row --footer d-flex align-middle">
+                    <div class="column col-xs-6 plan-item">
+                        <p class="plan-item__name">Option</p>
+                    </div>
+                    <div class="column col-xs-6 plan-item">
+                        <button data-modal="#order-modal" class="btn btn-primary modalTrigger">Sign up</button>
+                    </div>
+                </div>
+            </div>		
+ <!--Enterprise -->
+            <div class="plan-mobile__item">
+                <div class="row plan-table__row --header d-flex align-middle">
+                    <div class="column col-xs-6 plan-item">
+                        <p class="plan-item__name">Features</p>
+                    </div>
+                    <div class="column col-xs-6 plan-item">
+                        <p class="plan-item__name">Enterprise</p>
+
+                        <p class="plan-item__price"><span class="plan-item__price--month --extraBold">€599</span> <span class="plan-item__price--year --extraBold">€6589</span></p>
+                    </div>
+                </div>
+					
+                <div class="row plan-table__row">
+                    <div class="column col-xs-6 plan-item">
+                        <p class="plan-item__name">Set up and maintenance</p>
+                    </div>
+                    <div class="column col-xs-6 plan-item">
+						Cloud                    </div>
+                </div>
+					
+                <div class="row plan-table__row">
+                    <div class="column col-xs-6 plan-item">
+                        <p class="plan-item__name">Scans per month</p>
+                    </div>
+                    <div class="column col-xs-6 plan-item">
+						200                    </div>
+                </div>
+					
+                <div class="row plan-table__row">
+                    <div class="column col-xs-6 plan-item">
+                        <p class="plan-item__name">User accounts</p>
+                    </div>
+                    <div class="column col-xs-6 plan-item">
+						Unlimited                    </div>
+                </div>
+					
+                <div class="row plan-table__row">
+                    <div class="column col-xs-6 plan-item">
+                        <p class="plan-item__name">Scan duration limit</p>
+                    </div>
+                    <div class="column col-xs-6 plan-item">
+						120 hours                    </div>
+                </div>
+					
+                <div class="row plan-table__row">
+                    <div class="column col-xs-6 plan-item">
+                        <p class="plan-item__name">Targets per scan</p>
+                    </div>
+                    <div class="column col-xs-6 plan-item">
+						4096                    </div>
+                </div>
+					
+                <div class="row plan-table__row">
+                    <div class="column col-xs-6 plan-item">
+                        <p class="plan-item__name">Investigations</p>
+                    </div>
+                    <div class="column col-xs-6 plan-item">
+								<figure class="plan-item__state default-icon">
+			<img src="./SpiderFoot HX - SpiderFoot_files/checked.png" alt="checked icon">
+		</figure>
+	                    </div>
+                </div>
+					
+                <div class="row plan-table__row">
+                    <div class="column col-xs-6 plan-item">
+                        <p class="plan-item__name">Correlations</p>
+                    </div>
+                    <div class="column col-xs-6 plan-item">
+								<figure class="plan-item__state default-icon">
+			<img src="./SpiderFoot HX - SpiderFoot_files/checked.png" alt="checked icon">
+		</figure>
+	                    </div>
+                </div>
+					
+                <div class="row plan-table__row">
+                    <div class="column col-xs-6 plan-item">
+                        <p class="plan-item__name">Data retention</p>
+                    </div>
+                    <div class="column col-xs-6 plan-item">
+						24 months                    </div>
+                </div>
+					
+                <div class="row plan-table__row">
+                    <div class="column col-xs-6 plan-item">
+                        <p class="plan-item__name">Customer support</p>
+                    </div>
+                    <div class="column col-xs-6 plan-item">
+								<figure class="plan-item__state default-icon">
+			<img src="./SpiderFoot HX - SpiderFoot_files/checked.png" alt="checked icon">
+		</figure>
+	                    </div>
+                </div>
+					
+                <div class="row plan-table__row">
+                    <div class="column col-xs-6 plan-item">
+                        <p class="plan-item__name">Monitoring and change notifications</p>
+                    </div>
+                    <div class="column col-xs-6 plan-item">
+								<figure class="plan-item__state default-icon">
+			<img src="./SpiderFoot HX - SpiderFoot_files/checked.png" alt="checked icon">
+		</figure>
+	                    </div>
+                </div>
+					
+                <div class="row plan-table__row">
+                    <div class="column col-xs-6 plan-item">
+                        <p class="plan-item__name">SpiderFoot HX API</p>
+                    </div>
+                    <div class="column col-xs-6 plan-item">
+								<figure class="plan-item__state default-icon">
+			<img src="./SpiderFoot HX - SpiderFoot_files/checked.png" alt="checked icon">
+		</figure>
+	                    </div>
+                </div>
+					
+                <div class="row plan-table__row">
+                    <div class="column col-xs-6 plan-item">
+                        <p class="plan-item__name">Screenshotting</p>
+                    </div>
+                    <div class="column col-xs-6 plan-item">
+								<figure class="plan-item__state default-icon">
+			<img src="./SpiderFoot HX - SpiderFoot_files/checked.png" alt="checked icon">
+		</figure>
+	                    </div>
+                </div>
+					
+                <div class="row plan-table__row --footer d-flex align-middle">
+                    <div class="column col-xs-6 plan-item">
+                        <p class="plan-item__name">Option</p>
+                    </div>
+                    <div class="column col-xs-6 plan-item">
+                        <button data-modal="#order-modal" class="btn btn-primary modalTrigger">Sign up</button>
+                    </div>
+                </div>
+            </div>	
+	   </div>
+    </div></section>
+
+
+	<div class="modal product-modal" id="order-modal">
+		<div class="modal__body">
+			<div class="modal__content table-sizes">
+				<div class="modal__close default-icon"></div>
+				<div class="row align-center align-middle">
+					<div class="col-md-5 col-xs-12 product-modal__column">
+						<figure class="product-modal__icon default-icon">
+													<!--<img src="https://www.spiderfoot.net/wp-content/uploads/2019/07/logo-large.png" alt="modal image">-->
+							<img src="./SpiderFoot HX - SpiderFoot_files/logoModal.svg" alt="modal image">
+						</figure>
+					</div>
+					<div class="col-md-7 col-xs-12 product-modal__column">
+						<div class="product-modal__content">
+							<h1 class="product-modal__content--title --bold heading-2">Sign up for an account</h1>
+							<p class="product-modal__content--description">
+							No credit card. No spam. Just free access to get your feet wet and then upgrade if you need to.							</p>
+							<div>
+								<form action="https://www.spiderfoot.net/wp-content/themes/spiderfoot/submit.php" method="get">
+									<div class="subscribe-block m-auto">
+										<input placeholder="Your e-mail address" type="email" value="" class="form-input subscribe-block__input --product" name="email" required="">
+										<input type="submit" value="Sign up" class="subscribe-block__btn --product">
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+<footer id="colophon" class="footer wrap-line">
+    <div class="container overlap">
+        <div class="row align-center align-middle text-center">
+            <div class="col-xl-4 col-md-5 col-sm-8 col-xs-12">
+                <h5 class="footer-title --extraBold heading-2">Try out SpiderFoot HX</h5>
+
+               <form action="https://www.spiderfoot.net/wp-content/themes/spiderfoot/submit.php" method="get">
+                    <div class="subscribe-block m-auto">
+                        <input placeholder="Your e-mail address" type="email" value="" class="form-input subscribe-block__input" name="email" required="">
+                        <input type="submit" value="" class="subscribe-block__btn">
+                    </div>
+                </form>
+
+                <nav id="footer-navigation" class="footer-navigation">
+				
+				<div class="menu-primary_ua-container"><ul id="primary-navigationa" class="menu navbar text-left"><li id="nav-menu-item-327" class="main-menu-item  menu-item-even menu-item-depth-0 menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-188 current_page_item"><a href="https://www.spiderfoot.net/hx/" class="menu-link main-menu-link">SpiderFoot HX</a></li>
+<li id="nav-menu-item-33" class="main-menu-item  menu-item-even menu-item-depth-0 menu-item menu-item-type-post_type menu-item-object-page"><a href="https://www.spiderfoot.net/documentation/" class="menu-link main-menu-link">Documentation</a></li>
+<li id="nav-menu-item-328" class="main-menu-item  menu-item-even menu-item-depth-0 menu-item menu-item-type-post_type menu-item-object-page"><a href="https://www.spiderfoot.net/news/" class="menu-link main-menu-link">News</a></li>
+</ul></div>				
+                </nav><!-- #footer-navigation -->
+            </div>
+        </div>
+        <div class="row align-center align-middle text-center">
+            <div class="col-xl-6 col-md-8 col-sm-6 col-xs-12">
+                <nav id="social-navigation --footer" class="social-navigation --footer">
+
+				<div class="menu-primary_ua-container"><ul id="primary-navigationa" class="menu navbar text-center"><li id="nav-menu-item-36" class="main-menu-item  menu-item-even menu-item-depth-0 menu-item menu-item-type-custom menu-item-object-custom"><a target="_blank" href="https://twitter.com/spiderfoot" class="menu-link main-menu-link">Twitter</a></li>
+<li id="nav-menu-item-37" class="main-menu-item  menu-item-even menu-item-depth-0 menu-item menu-item-type-custom menu-item-object-custom"><a target="_blank" href="https://github.com/smicallef/spiderfoot" class="menu-link main-menu-link">Github</a></li>
+<li id="nav-menu-item-379" class="main-menu-item  menu-item-even menu-item-depth-0 menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy"><a href="https://www.spiderfoot.net/privacy-policy/" class="menu-link main-menu-link">Privacy</a></li>
+<li id="nav-menu-item-380" class="main-menu-item  menu-item-even menu-item-depth-0 menu-item menu-item-type-custom menu-item-object-custom"><a href="mailto:support@spiderfoot.net" class="menu-link main-menu-link">Support</a></li>
+</ul></div>		
+                </nav><!-- #social-navigation -->
+                <div class="copyright-block">
+                    <div class="copyright-info">© 2020, SM7 Software OÜ</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer><!-- #colophon -->
+<script type="text/javascript" src="./SpiderFoot HX - SpiderFoot_files/jquery-3.4.1.js.download"></script>
+<script type="text/javascript" src="./SpiderFoot HX - SpiderFoot_files/flickity.pkgd.min.js.download"></script>
+<script type="text/javascript" src="./SpiderFoot HX - SpiderFoot_files/js_spiderfoot.min.js.download"></script>
+<script type="text/javascript" src="./SpiderFoot HX - SpiderFoot_files/mark.js.download"></script></body></html>
